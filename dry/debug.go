@@ -91,7 +91,7 @@ func function(pc uintptr) []byte {
 	//	*T.ptrmethod
 
 	// if package path is github.com/xxx.dry/debug.*T.ptrmethod
-	// we want *T.ptrmethod but not .com/xxx.dry/debug.*T.ptrmethod
+	// we want *T.ptrmethod but not com/xxx.dry/debug.*T.ptrmethod
 	if period := bytes.LastIndex(name, sep); period >= 0 {
 		name = name[period+1:]
 	}
